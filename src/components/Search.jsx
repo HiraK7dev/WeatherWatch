@@ -12,7 +12,7 @@ function Search() {
     }
   return (
     <>
-      <form className="input input-bordered flex items-center gap-2 w-3/4 shadow-xl">
+      <form className="transition input input-bordered flex items-center gap-2 w-3/4 shadow-md hover:shadow-xl ease-in">
         <input value={city} onChange={handleOnChange} type="text" className="grow" placeholder="Search" />
         <button className="btn btn-ghost btn-sm" onClick={handleSearch}>
         <svg
