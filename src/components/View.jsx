@@ -120,14 +120,14 @@ function View() {
           <div className='h-1'/>
           <p className='font-sans text-xl font-medium'>
             {
-              `${parseInt(weather?.main?.sea_level)} ` + `m`
+              weather?.main?.sea_level == undefined ? `---` : `${parseInt(weather?.main?.sea_level)} ` + `m`
             }
           </p>
         </div>
         <div className='flex flex-col justify-center items-center w-full h-full'>
           <h5 className='font-sans text-xs font-medium'>Visibility</h5>
           <div className='h-1'/>
-          <p className='font-sans text-md font-medium'>
+          <p className='font-sans text-xl font-medium'>
             {
               `${parseInt(metersToKilometers(weather?.visibility))} ` + `km/h`
             }

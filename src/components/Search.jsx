@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { getWeatherDataCustom } from "../api/api";
+import { WeatherDataContext } from "../context/WeatherContext";
 
 function Search() {
+    const {weather, setWeather} = useContext(WeatherDataContext);
     const [city, setCity] = useState(``);
     function handleOnChange(event){
         const { value } = event.target;
@@ -10,6 +12,7 @@ function Search() {
     async function handleSearch(event){
         event.preventDefault();
         const data = await getWeatherDataCustom(city);
+        setWeather(data);
         console.log(data); //Testing the working of the button
     }
   return (
