@@ -7,19 +7,17 @@ function getPosition(){
     return position
 }
 
-const API_KEY = `927c514bb143c1172762ec8b664a485e`;
-
 export async function getWeatherData(){
     const positionValue = await getPosition();
     const {latitude, longitude} = positionValue.coords;
-    const data = await fetch(`${base_url}?lat=${latitude}&lon=${longitude}&units=metric&appid=${API_KEY}`);
+    const data = await fetch(`${base_url}?lat=${latitude}&lon=${longitude}&units=metric&appid=${import.meta.env.VITE_API_KEY}`);
     const weatherData = await data.json();
     console.log(weatherData); //Viewing Data
     return weatherData;
 }
 
 export async function getWeatherDataCustom(place){
-    const customData = await fetch(`${base_url}?q=${place}&units=metric&appid=${API_KEY}`);
+    const customData = await fetch(`${base_url}?q=${place}&units=metric&appid=${import.meta.env.VITE_API_KEY}`);
     const customWeatherData = await customData.json();
     console.log(customWeatherData); //Viewing Data
     return customWeatherData;
