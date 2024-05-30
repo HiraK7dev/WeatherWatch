@@ -84,7 +84,7 @@ function View() {
           <div className='h-1'/>
           <p className='font-sans text-xl font-medium'>
             {
-              `${parseInt(weather?.wind?.speed)} ` + `km/h`
+              weather?.wind?.speed == undefined ? `---` : `${parseInt(weather?.wind?.speed)} ` + `km/h`
             }
           </p>
         </div>
@@ -93,7 +93,7 @@ function View() {
           <div className='h-1'/>
           <p className='font-sans text-xl font-medium'>
             {
-              `${parseInt(weather?.main?.humidity)} ` + `%`
+              weather?.main?.humidity == undefined ? `---` : `${parseInt(weather?.main?.humidity)} ` + `%`
             }
           </p>
         </div>
@@ -102,7 +102,7 @@ function View() {
           <div className='h-1'/>
           <p className='font-sans text-xl font-medium'>
             {
-              `${parseInt(weather?.main?.feels_like)}` + `°C`
+              weather?.main?.feels_like == undefined ? `---` : `${parseInt(weather?.main?.feels_like)}` + `°C`
             }
           </p>
         </div>
@@ -111,7 +111,7 @@ function View() {
           <div className='h-1'/>
           <p className='font-sans text-xl font-medium'>
             {
-              `${parseInt(weather?.main?.pressure)} ` + `mb`
+              weather?.main?.pressure == undefined ? `---` : `${parseInt(weather?.main?.pressure)} ` + `mb`
             }
           </p>
         </div>
@@ -129,7 +129,7 @@ function View() {
           <div className='h-1'/>
           <p className='font-sans text-xl font-medium'>
             {
-              `${parseInt(metersToKilometers(weather?.visibility))} ` + `km/h`
+              weather?.visibility == undefined ? `---` : `${parseInt(metersToKilometers(weather?.visibility))} ` + `km/h`
             }
           </p>
         </div>

@@ -4,22 +4,26 @@ import { WeatherDataContext } from "../context/WeatherContext";
 
 function Search() {
     const {weather, setWeather} = useContext(WeatherDataContext);
+    const [isLoading, setisLoading] = useState(0);
     const [city, setCity] = useState(``);
     function handleOnChange(event){
         const { value } = event.target;
         setCity(value);
     }
     async function handleSearch(event){
+        setisLoading(1);
         event.preventDefault();
         const data = await getWeatherDataCustom(city);
         setWeather(data);
-        console.log(data); //Testing the working of the button
+        setCity(``);
+        setisLoading(0);
     }
   return (
     <>
       <form className="transition input input-bordered flex items-center gap-2 w-3/4 shadow-md hover:shadow-xl ease-in">
         <input value={city} onChange={handleOnChange} type="text" className="grow" placeholder="Search" />
-        <button className="btn btn-ghost btn-sm" onClick={handleSearch}>
+        {
+          isLoading ? <span className="loading loading-ring loading-sm"></span> : <button className="btn btn-ghost btn-sm" onClick={handleSearch}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
@@ -33,6 +37,7 @@ function Search() {
           />
         </svg>
         </button>
+        }
       </form>
     </>
   );
