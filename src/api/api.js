@@ -19,7 +19,7 @@ export async function getWeatherData(){
 }
 
 export async function getWeatherDataCustom(place){
-    const customData = await fetch(`${base_url}?q=${place}`);
+    const customData = await fetch(`${base_url}?q=${place}&appid=${API_KEY}`);
     const customWeatherData = await customData.json();
     console.log(customWeatherData); //Viewing Data
     return customWeatherData;

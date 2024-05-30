@@ -17,7 +17,6 @@ import icon13d from '../assets/icons/13d.png'
 import icon13n from '../assets/icons/13n.png'
 import icon50d from '../assets/icons/50d.png'
 import icon50n from '../assets/icons/50n.png'
-import undefined from '../assets/icons/unknown.png'
 import { WeatherDataContext } from '../context/WeatherContext'
 
 function View() {
