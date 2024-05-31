@@ -21,7 +21,7 @@ import { WeatherDataContext } from '../context/WeatherContext'
 
 function View() {
 
-  const { weather, setWeather } = useContext(WeatherDataContext);
+  const { weather } = useContext(WeatherDataContext);
   function setIcon(w){
     const icon = {
       "01d": icon01d,
