@@ -20,7 +20,7 @@ function Search() {
     }
   return (
     <>
-      <form className="transition input input-bordered flex items-center gap-2 w-3/4 shadow-md hover:shadow-xl ease-in glass">
+      <form className="transition input input-bordered flex items-center gap-2 sm:w-3/4 shadow-md hover:shadow-xl ease-in glass w-[85%]">
         <input value={city} onChange={handleOnChange} type="text" className="grow" placeholder="Search" />
         {
           isLoading ? <span className="loading loading-ring loading-sm"></span> : <button className="btn btn-ghost btn-sm" onClick={handleSearch}>

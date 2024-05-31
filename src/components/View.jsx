@@ -78,7 +78,7 @@ function View() {
     </div>
     <br/><br/>
     {/* More Information Panel */}
-    <div className='grid grid-rows-2 grid-cols-3 gap-4 w-3/4 p-3 h-[28%] glass rounded-3xl'>
+    <div className='grid grid-rows-2 grid-cols-3 gap-4 sm:w-3/4 w-[85%] p-3 h-[28%] glass rounded-3xl'>
         <div className='flex flex-col justify-center items-center w-full h-full'>
           <h5 className='font-sans sm:text-xs font-medium text-xs'>Wind</h5>
           <div className='h-1'/>
