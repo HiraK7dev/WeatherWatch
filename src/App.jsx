@@ -22,7 +22,7 @@ function App() {
     return(
       <>
       <div className='w-screen h-screen flex justify-center items-center'>
-        <div className='flex flex-col justify-center items-center h-[700px] w-[800px] bg-primary rounded-3xl shadow-2xl'>
+        <div className='flex flex-col justify-center items-center sm:h-[700px] sm:w-[800px] bg-primary rounded-3xl shadow-2xl w-[360px] h-[550px]'>
           <img src={undefined}/>
           <div className='flex justify-center items-center w-2/3 h-[10%]'>
             <p className='font-medium text-xl font-mono'>Fetching Data...</p>
@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       <div className='flex justify-center items-center h-screen w-screen'>
-        <div className='flex flex-col justify-center items-center h-[700px] w-[800px] bg-primary rounded-3xl shadow-2xl'>
+        <div className='flex flex-col justify-center items-center sm:h-[700px] sm:w-[800px] bg-primary rounded-3xl shadow-2xl w-[360px] h-[550px]'>
           <Search/>
           <View/>
         </div>

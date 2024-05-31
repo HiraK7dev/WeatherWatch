@@ -62,15 +62,15 @@ function View() {
     <div className='flex flex-col justify-evenly items-center w-3/4 h-[30%]'>
         {/* <h2 className='font-sans text-3xl font-medium'>North Guwahati</h2> */}
         <div className='flex justify-center items-center'>
-          <img src={img} className='w-22'/>
+          <img src={img} className='w-22 sm: w-20'/>
           <div className='w-3'></div>
-          <h3 className='font-sans text-7xl font-semibold'>
+          <h3 className='font-sans sm:text-7xl font-semibold text-5xl'>
             {
               `${parseInt(weather?.main?.temp)}` + `°C`
             }
           </h3>
         </div>
-        <h2 className='font-sans text-sm font-medium tracking-wider'>
+        <h2 className='font-sans sm:text-sm font-medium tracking-wider text-xs'>
           {
             weather?.name
           }
@@ -80,54 +80,54 @@ function View() {
     {/* More Information Panel */}
     <div className='grid grid-rows-2 grid-cols-3 gap-4 w-3/4 p-3 h-[28%] glass rounded-3xl'>
         <div className='flex flex-col justify-center items-center w-full h-full'>
-          <h5 className='font-sans text-xs font-medium'>Wind</h5>
+          <h5 className='font-sans sm:text-xs font-medium text-xs'>Wind</h5>
           <div className='h-1'/>
-          <p className='font-sans text-xl font-medium'>
+          <p className='font-sans sm:text-xl font-medium text-base'>
             {
               weather?.wind?.speed == undefined ? `---` : `${parseInt(weather?.wind?.speed)} ` + `km/h`
             }
           </p>
         </div>
         <div className='flex flex-col justify-center items-center w-full h-full'>
-          <h5 className='font-sans text-xs font-medium'>Humidity</h5>
+          <h5 className='font-sans sm:text-xs font-medium text-xs'>Humidity</h5>
           <div className='h-1'/>
-          <p className='font-sans text-xl font-medium'>
+          <p className='font-sans sm:text-xl font-medium text-base'>
             {
               weather?.main?.humidity == undefined ? `---` : `${parseInt(weather?.main?.humidity)} ` + `%`
             }
           </p>
         </div>
         <div className='flex flex-col justify-center items-center w-full h-full'>
-          <h5 className='font-sans text-xs font-medium'>Real Feel</h5>
+          <h5 className='font-sans sm:text-xs font-medium text-xs'>Real Feel</h5>
           <div className='h-1'/>
-          <p className='font-sans text-xl font-medium'>
+          <p className='font-sans sm:text-xl font-medium text-base'>
             {
               weather?.main?.feels_like == undefined ? `---` : `${parseInt(weather?.main?.feels_like)}` + `°C`
             }
           </p>
         </div>
         <div className='flex flex-col justify-center items-center w-full h-full'>
-          <h5 className='font-sans text-xs font-medium'>Pressure</h5>
+          <h5 className='font-sans sm:text-xs font-medium text-xs'>Pressure</h5>
           <div className='h-1'/>
-          <p className='font-sans text-xl font-medium'>
+          <p className='font-sans sm:text-xl font-medium text-base'>
             {
               weather?.main?.pressure == undefined ? `---` : `${parseInt(weather?.main?.pressure)} ` + `mb`
             }
           </p>
         </div>
         <div className='flex flex-col justify-center items-center w-full h-full'>
-          <h5 className='font-sans text-xs font-medium'>Sea Level</h5>
+          <h5 className='font-sans sm:text-xs font-medium text-xs'>Sea Level</h5>
           <div className='h-1'/>
-          <p className='font-sans text-xl font-medium'>
+          <p className='font-sans sm:text-xl font-medium text-base'>
             {
               weather?.main?.sea_level == undefined ? `---` : `${parseInt(weather?.main?.sea_level)} ` + `m`
             }
           </p>
         </div>
         <div className='flex flex-col justify-center items-center w-full h-full'>
-          <h5 className='font-sans text-xs font-medium'>Visibility</h5>
+          <h5 className='font-sans sm:text-xs font-medium text-xs'>Visibility</h5>
           <div className='h-1'/>
-          <p className='font-sans text-xl font-medium'>
+          <p className='font-sans sm:text-xl font-medium text-base'>
             {
               weather?.visibility == undefined ? `---` : `${parseInt(metersToKilometers(weather?.visibility))} ` + `km/h`
             }
