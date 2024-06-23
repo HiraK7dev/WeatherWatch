@@ -1,8 +1,3 @@
-# React + Vite
+# WatchWeather
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to **WatchWeather**, a React-based application that provides the most recent weather report for your location. This repository contains all the necessary code to get the application up and running, as well as instructions for setting up the development environment and deploying the application.
